@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Doctors Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/auth.js"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo">
+<img src="assets/curelex-logo.png">
+</div>
+
+<nav>
+
+<a href="dashboard.html" class="nav">
+<span class="nav-icon">📊</span>
+<span>Dashboard</span>
+</a>
+
+<a href="doctor-verification.html" class="nav">
+<span class="nav-icon">🩺</span>
+<span>Doctor Verification</span>
+</a>
+
+<a href="analytics.html" class="nav">
+<span class="nav-icon">📈</span>
+<span>Patient Analytics</span>
+</a>
+
+<a href="doctors.html" class="nav active">
+<span class="nav-icon">👨‍⚕️</span>
+<span>Doctors</span>
+</a>
+
+<a href="patients.html" class="nav">
+<span class="nav-icon">👥</span>
+<span>Patients</span>
+</a>
+
+<a href="settings.html" class="nav">
+<span class="nav-icon">⚙️</span>
+<span>Settings</span>
+</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN AREA -->
+
+<div class="main">
+
+<header class="topbar">
+
+<div class="header-left">
+Doctors Management
+</div>
+
+<div class="header-right">
+<div class="notification">🔔</div>
+<div class="profile">👤 Admin</div>
+</div>
+
+</header>
+
+<main class="content">
+
+<h1>Doctors Management</h1>
+<p>View and manage registered doctors</p>
+
+<!-- SEARCH -->
+
+<input
+type="text"
+id="searchDoctor"
+placeholder="Search doctor..."
+class="search-input"
+/>
+
+<!-- FILTER TABS -->
+
+<div class="tabs">
+
+<button class="tab active" onclick="setTab('All')">All</button>
+<button class="tab" onclick="setTab('Active')">Active</button>
+<button class="tab" onclick="setTab('Suspended')">Suspended</button>
+
+</div>
+
+<!-- TABLE -->
+
+<div class="table-card">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Doctor</th>
+<th>Specialization</th>
+<th>Experience</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="doctorTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+<div id="doctorModal" class="modal" style="display:none; position:fixed; z-index:100; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+    <div style="background-color:#fff; padding:25px; border-radius:12px; min-width:350px; max-width:500px; position:relative; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <span onclick="document.getElementById('doctorModal').style.display='none'" style="position:absolute; right:20px; top:20px; cursor:pointer; font-size:24px; font-weight:bold; color:#64748b;">&times;</span>
+        <h2 id="modalName" style="margin-top:0; color:#1e293b; font-size:20px;"></h2>
+        <hr style="border:0; border-top:1px solid #e2e8f0; margin:15px 0;">
+        <div id="modalDetails" style="font-size:14px; color:#475569; line-height:1.8;"></div>
+    </div>
+</div>
+
+<script src="js/doctors.js"></script>
+
+</body>
+</html>

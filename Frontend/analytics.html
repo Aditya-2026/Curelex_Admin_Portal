@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Patient Analytics</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/auth.js"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo">
+<img src="assets/curelex-logo.png">
+</div>
+
+<nav>
+
+<a href="dashboard.html" class="nav">
+<span class="nav-icon">📊</span>
+<span>Dashboard</span>
+</a>
+
+<a href="doctor-verification.html" class="nav">
+<span class="nav-icon">🩺</span>
+<span>Doctor Verification</span>
+</a>
+
+<a href="analytics.html" class="nav active">
+<span class="nav-icon">📈</span>
+<span>Patient Analytics</span>
+</a>
+
+<a href="doctors.html" class="nav">
+<span class="nav-icon">👨‍⚕️</span>
+<span>Doctors</span>
+</a>
+
+<a href="patients.html" class="nav">
+<span class="nav-icon">👥</span>
+<span>Patients</span>
+</a>
+
+<a href="settings.html" class="nav">
+<span class="nav-icon">⚙️</span>
+<span>Settings</span>
+</a>
+
+</nav>
+
+</aside>
+
+<div class="main">
+
+<header class="topbar">
+Patient Analytics
+</header>
+
+<main class="content">
+
+<h1>Patient Analytics</h1>
+<p>Patient growth, demographics, and activity insights</p>
+
+<div class="charts-grid">
+
+<div class="chart-card">
+<h3>Patient Growth</h3>
+<canvas id="growthChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Daily Activity</h3>
+<canvas id="dailyChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Age Distribution</h3>
+<canvas id="ageChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Gender Distribution</h3>
+<canvas id="genderChart"></canvas>
+</div>
+
+<div class="chart-card full">
+<h3>New vs Returning Patients</h3>
+<canvas id="returnChart"></canvas>
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+<script src="js/analytics.js"></script>
+
+</body>
+</html>
