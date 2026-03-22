@@ -68,8 +68,13 @@ app.use('/api/patients', patientRoutes);
 // Step 10 - Dashboard & Analytics routes
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
+const financeRoutes = require('./routes/financeRoutes');
+const logRoutes = require('./routes/logRoutes');
+
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/finance', financeRoutes);
+app.use('/api/logs', logRoutes);
 
 
 // =====================================================
