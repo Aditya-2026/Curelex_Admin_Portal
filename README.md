@@ -65,17 +65,17 @@ The frontend connects directly to the backend API you just started.
 2. **Run the Frontend Application:**
    Because the frontend fetches data from the API, it is highly recommended to serve the files using a local development server to avoid CORS issues.
 
-   **Option A: Using Node's `serve` package (Recommended)**:
-   ```bash
-   npx serve .
-   ```
-
-   **Option B: Using a VS Code Extension**:
+   **Option A: Using a VS Code Extension**:
    - Install the **Live Server** extension in VS Code.
    - Right-click on `index.html` or `login.html` and select **"Open with Live Server"**.
 
-   **Option C: Direct Local Access**:
+   **Option B: Direct Local Access**:
    - In some browsers, you can simply double-click and open `login.html` directly from your file explorer. Just make sure the Backend is explicitly running on port 5000.
-
-3. **Log In:**
+   
+   **Option C: Using Node's `serve` package (Recommended)**:
+   ```bash
+   npx serve .
+   ```
+  
+4. **Log In:**
    - Open the app in your browser and use login credentials saved in table to access the Dashboard.
