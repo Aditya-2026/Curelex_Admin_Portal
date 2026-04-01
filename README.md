@@ -30,7 +30,7 @@ The backend handles API requests, database interactions, and business logic.
    ```
 
 3. **Configure the Database:**
-   - **Step 1:** Run `node create_db.js` to automatically create the empty `curelexDb` database or create the datbase manually using Mysql Workbench.
+   - **Step 1:** Run `node create_db.js` to automatically create the empty `curelexDb` database or create the database manually using Mysql Workbench.
    - **Step 2:** Run `node seed_runner.js` to securely connect to the database, generate all tables from `schema.sql`, and securely populate them with dummy data from `seed.sql`! OR run this both files(`schema.sql` and `seed.sql`) content manually on Mysql Workbench
 
 4. **Add your Environment Variables:**
@@ -78,4 +78,4 @@ The frontend connects directly to the backend API you just started.
    - In some browsers, you can simply double-click and open `login.html` directly from your file explorer. Just make sure the Backend is explicitly running on port 5000.
 
 3. **Log In:**
-   - Open the app in your browser and use an admin token or login credentials to access the Dashboard.
+   - Open the app in your browser and use login credentials saved in table to access the Dashboard.
