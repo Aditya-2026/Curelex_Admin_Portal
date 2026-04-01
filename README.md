@@ -30,8 +30,8 @@ The backend handles API requests, database interactions, and business logic.
    ```
 
 3. **Configure the Database:**
-   - Create a new MySQL database named `curelexDb`.
-   - Run the SQL schema files found in the `Backend/database/` folder (e.g., `schema.sql` and `schema_v2.sql`) to generate the required tables. You can also run the seed files if you want to insert test data.
+   - **Step 1:** Run `node create_db.js` to automatically create the empty `curelexDb` database or create the datbase manually using Mysql Workbench.
+   - **Step 2:** Run `node seed_runner.js` to securely connect to the database, generate all tables from `schema.sql`, and securely populate them with dummy data from `seed.sql`! OR run this both files(`schema.sql` and `seed.sql`) content manually on Mysql Workbench
 
 4. **Add your Environment Variables:**
    - Copy the `.env.example` file and rename it to `.env`:
